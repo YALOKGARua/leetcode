@@ -4,7 +4,7 @@ This repository contains solutions to various LeetCode problems. Each file is na
 
 ## Structure
 
-- Each file with `.cpp`, `.c`, or `.rs` extension contains the solution for a specific LeetCode problem.
+- Each file with `.cpp`, `.c`, or `.rs` `.js` extension contains the solution for a specific LeetCode problem.
 - The filename format is either `<problem_number>.<extension>` or `<problem_number> <problem_title>.<extension>`, for example, `1452.cpp` or `75 Sort Colors.c`
 
 ## Languages
