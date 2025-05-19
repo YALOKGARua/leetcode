@@ -12,6 +12,7 @@ This repository contains solutions to various LeetCode problems. Each file is na
 - C++ (`.cpp`)
 - C (`.c`)
 - Rust (`.rs`)
+- JavaScript (`.js`)
 
 ## Usage
 
@@ -35,7 +36,20 @@ rustc 2409.rs
 ./2409
 ```
 
+### For JavaScript:
+```sh
+node 1036.js
+```
+
 ## Problems by Language
+
+### JavaScript
+- 1036 Escape a Large Maze
+- 2027 Minimum Moves to Convert String
+- 2901
+- 2918 Minimum Equal Sum of Two Arrays After Replacing Zeros
+- 3024
+- 3203
 
 ### C
 - 75 Sort Colors
