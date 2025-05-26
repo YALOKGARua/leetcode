@@ -4,7 +4,7 @@ This repository contains solutions to various LeetCode problems. Each file is na
 
 ## Structure
 
-- Each file with `.cpp`, `.c`, or `.rs` `.js` extension contains the solution for a specific LeetCode problem.
+- Each file with `.cpp`, `.c`, `.rs`, `.js`, `.py`, or `.sql` extension contains the solution for a specific LeetCode problem.
 - The filename format is either `<problem_number>.<extension>` or `<problem_number> <problem_title>.<extension>`, for example, `1452.cpp` or `75 Sort Colors.c`
 
 ## Languages
@@ -13,6 +13,8 @@ This repository contains solutions to various LeetCode problems. Each file is na
 - C (`.c`)
 - Rust (`.rs`)
 - JavaScript (`.js`)
+- Python (`.py`)
+- SQL (`.sql`)
 
 ## Usage
 
@@ -41,15 +43,77 @@ rustc 2409.rs
 node 1036.js
 ```
 
+### For Python:
+```sh
+python 3446.py
+```
+
+### For SQL:
+```sh
+sqlite3 < 3482.sql
+```
+
 ## Problems by Language
 
 ### JavaScript
 - 1036 Escape a Large Maze
 - 2027 Minimum Moves to Convert String
+- 2626 Array Reduce Transformation
+- 2627 Debounce
+- 2628 JSON Deep Equal
+- 2715 Timeout Cancellation
 - 2901
 - 2918 Minimum Equal Sum of Two Arrays After Replacing Zeros
 - 3024
 - 3203
+
+### Python
+- 1397 Find All Good Strings
+- 1505 Minimum Possible Integer After at Most K Adjacent Swaps On Digits
+- 1774 Closest Dessert Cost
+- 1849 Splitting a String Into Descending Consecutive Values
+- 1850 Minimum Adjacent Swaps to Reach the Kth Smallest Number
+- 1928 Minimum Cost to Reach Destination in Time
+- 2045 Second Minimum Time to Reach Destination
+- 2121 Intervals Between Identical Elements
+- 2171 Removing Minimum Number of Magic Beans
+- 2322 Minimum Score After Removals on a Tree
+- 2426 Number of Pairs Satisfying Inequality
+- 2483 Minimum Penalty for a Shop
+- 2515 Shortest Distance to Target String in a Circular Array
+- 2565 Subsequence With the Minimum Score
+- 2615 Sum of Distances
+- 2651 Calculate Delayed Arrival Time
+- 2654 Minimum Number of Operations to Make All Array Elements Equal to 1
+- 2656 Maximum Sum With Exactly K Elements
+- 2860 Happy Students
+- 2973 Find Number of Coins to Place in Tree Nodes
+- 3298 Apply Operations to Make String Empty
+- 3312 Find the Array Concatenation Value
+- 3355 Maximum Number of Alloys
+- 3446 Sort the Diagonals of a Matrix
+- 3485 Find the Longest Equal Subarray
+- 3560 Minimum Cost to Make Array Equal
+
+### C++
+- 1452
+- 1621
+- 1691 Maximum Height by Stacking Cuboids
+- 1857 Largest Color Value in a Directed Graph
+- 1880 Check if Word Equals Summation of Two Words
+- 1998 GCD Sort of an Array
+- 2102 Sequentially Ordinal Rank Tracker
+- 2156 Find Substring With Given Hash Value
+- 2179 Count Good Triplets in an Array
+- 2249 Count Lattice Points Inside a Circle
+- 2858 Minimum Edge Reversals So Every Node Is Reachable
+- 2869 Minimum Operations to Make Array Equal
+- 2942 Find Words Containing Character
+- 2971 Find Polygon With the Largest Perimeter
+- 3068 Find the Maximum Sum of Node Values
+- 3208
+- 3334 Find the String with LCP
+- 3355 Maximum Number of Alloys
 
 ### C
 - 75 Sort Colors
@@ -71,6 +135,9 @@ node 1036.js
 - 2409 Count Days Spent Together
 - 2828 Check if a String Is an Acronym of Words
 - 3026 Maximum Good Subarray Sum
+
+### SQL
+- 3482 Analyze Organization Hierarchy
 
 ## Notes
 
