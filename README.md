@@ -139,6 +139,12 @@ sqlite3 < 3482.sql
 ### SQL
 - 3482 Analyze Organization Hierarchy
 
+### Hackerrank
+- maximum_subarray_modulo.cpp — Maximum Subarray Sum Modulo
+- connected_cell.cpp — Largest Connected Cell Region
+- short_palindrome.cpp — Count Short Palindromic Tuples
+- minimum_passes.cpp — Minimum Passes to Accumulate Candies
+
 ## Notes
 
 - These solutions are for educational purposes.
