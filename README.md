@@ -1,11 +1,11 @@
 # LeetCode Solutions
 
-This repository contains solutions to various LeetCode problems. Each file is named according to the problem number on LeetCode, making it easy to find the corresponding solution.
+Этот репозиторий содержит решения различных задач LeetCode. Каждый файл назван по номеру задачи, что облегчает поиск нужного решения.
 
 ## Structure
 
-- Each file with `.cpp`, `.c`, `.rs`, `.js`, `.py`, or `.sql` extension contains the solution for a specific LeetCode problem.
-- The filename format is either `<problem_number>.<extension>` or `<problem_number> <problem_title>.<extension>`, for example, `1452.cpp` or `75 Sort Colors.c`
+- Каждый файл с расширением `.cpp`, `.c`, `.rs`, `.js`, `.py`, `.ts`, `.cs`, или `.sql` содержит решение конкретной задачи LeetCode.
+- Формат имени файла: `<problem_number>.<extension>` или `<problem_number> <problem_title>.<extension>`, например, `1452.cpp` или `75 Sort Colors.c`
 
 ## Languages
 
@@ -13,12 +13,14 @@ This repository contains solutions to various LeetCode problems. Each file is na
 - C (`.c`)
 - Rust (`.rs`)
 - JavaScript (`.js`)
+- TypeScript (`.ts`)
 - Python (`.py`)
 - SQL (`.sql`)
+- C# (`.cs`)
 
 ## Usage
 
-You can compile and run the solutions using your preferred compiler.
+Вы можете компилировать и запускать решения с помощью вашего любимого компилятора.
 
 ### For C++:
 ```sh
@@ -43,6 +45,11 @@ rustc 2409.rs
 node 1036.js
 ```
 
+### For TypeScript:
+```sh
+ts-node 2359.ts
+```
+
 ### For Python:
 ```sh
 python 3446.py
@@ -53,19 +60,69 @@ python 3446.py
 sqlite3 < 3482.sql
 ```
 
+### For C#:
+```sh
+dotnet run 833.find-and-replace-in-string.cs
+```
+
 ## Problems by Language
 
-### JavaScript
-- 1036 Escape a Large Maze
-- 2027 Minimum Moves to Convert String
-- 2626 Array Reduce Transformation
-- 2627 Debounce
-- 2628 JSON Deep Equal
-- 2715 Timeout Cancellation
+### TypeScript
+- 1154 Day of the Year
+- 1157 Online Majority Element in Subarray
+- 1253 Reconstruct a 2-Row Binary Matrix
+- 1554 Strings Differ by One Character
+- 1608 Special Array With X Elements Greater Than or Equal X
+- 1642 Furthest Building You Can Reach
+- 1684 Count the Number of Consistent Strings
+- 2197 Replace Non-Coprime Numbers in Array
+- 2232 Minimize Result by Adding Parentheses to Expression
+- 2256 Minimum Average Difference
+- 2359 Find Closest Node to Given Two Nodes
+- 237 Delete Node in a Linked List
+- 2864 Maximum Odd Binary Number
 - 2901
 - 2918 Minimum Equal Sum of Two Arrays After Replacing Zeros
 - 3024
+- 3075 Maximize Happiness of Selected Children
 - 3203
+- 3272 Find the Count of Good Integers
+- 3545 Minimum Deletions for At Most K Distinct Characters
+- 449 Serialize and Deserialize BST
+- 628 Maximum Product of Three Numbers
+- 777 Swap Adjacent in LR String
+- 782 Transform to Chessboard
+- 783 Minimum Distance Between BST Nodes
+- 790 Domino and Tromino Tiling
+- 793 Preimage Size of Factorial Zeroes Function
+
+### C++
+- 805 Split Array With Same Average
+- 816 Ambiguous Coordinates
+- 831 Masking Personal Information
+- 834 Sum of Distances in Tree
+- 835 Image Overlap
+
+### C
+- 75 Sort Colors
+- 1680 Concatenation of Consecutive Binary Numbers
+- 1735 Count Ways to Make Array With Product
+- 1877 Minimize Maximum Pair Sum in Array
+- 1954 Minimum Garden Perimeter to Collect Enough Apples
+- 2124 Check if All A's Appears Before All B's
+- 2826 Sorting Three Groups
+- 2929 Distribute Candies Among Children II
+- 2997 Minimum Number of Operations to Make Array XOR Equal to K
+- 3136
+- 3179 Find the N-th Value After K Seconds
+- 3352
+
+### Rust
+- 1864 Minimum Number of Swaps to Make the Binary String Alternating
+- 2360 Longest Cycle in a Graph
+- 2409 Count Days Spent Together
+- 2828 Check if a String Is an Acronym of Words
+- 3026 Maximum Good Subarray Sum
 
 ### Python
 - 1397 Find All Good Strings
@@ -95,49 +152,23 @@ sqlite3 < 3482.sql
 - 3485 Find the Longest Equal Subarray
 - 3560 Minimum Cost to Make Array Equal
 
-### C++
-- 1452
-- 1621
-- 1691 Maximum Height by Stacking Cuboids
-- 1857 Largest Color Value in a Directed Graph
-- 1880 Check if Word Equals Summation of Two Words
-- 1998 GCD Sort of an Array
-- 2102 Sequentially Ordinal Rank Tracker
-- 2156 Find Substring With Given Hash Value
-- 2179 Count Good Triplets in an Array
-- 2249 Count Lattice Points Inside a Circle
-- 2858 Minimum Edge Reversals So Every Node Is Reachable
-- 2869 Minimum Operations to Make Array Equal
-- 2942 Find Words Containing Character
-- 2971 Find Polygon With the Largest Perimeter
-- 3068 Find the Maximum Sum of Node Values
-- 3208
-- 3334 Find the String with LCP
-- 3355 Maximum Number of Alloys
-
-### C
-- 75 Sort Colors
-- 1680 Concatenation of Consecutive Binary Numbers
-- 1735 Count Ways to Make Array With Product
-- 1877 Minimize Maximum Pair Sum in Array
-- 1954 Minimum Garden Perimeter to Collect Enough Apples
-- 2124 Check if All A's Appears Before All B's
-- 2826 Sorting Three Groups
-- 2929 Distribute Candies Among Children II
-- 2997 Minimum Number of Operations to Make Array XOR Equal to K
-- 3136
-- 3179 Find the N-th Value After K Seconds
-- 3352
-
-### Rust
-- 1864 Minimum Number of Swaps to Make the Binary String Alternating
-- 2360 Longest Cycle in a Graph
-- 2409 Count Days Spent Together
-- 2828 Check if a String Is an Acronym of Words
-- 3026 Maximum Good Subarray Sum
+### JavaScript
+- 1036 Escape a Large Maze
+- 2027 Minimum Moves to Convert String
+- 2626 Array Reduce Transformation
+- 2627 Debounce
+- 2628 JSON Deep Equal
+- 2715 Timeout Cancellation
+- 2901
+- 2918 Minimum Equal Sum of Two Arrays After Replacing Zeros
+- 3024
+- 3203
 
 ### SQL
 - 3482 Analyze Organization Hierarchy
+
+### C#
+- 833 Find And Replace in String
 
 ### Hackerrank
 - maximum_subarray_modulo.cpp — Maximum Subarray Sum Modulo
@@ -147,8 +178,8 @@ sqlite3 < 3482.sql
 
 ## Notes
 
-- These solutions are for educational purposes.
-- Feel free to use them as a reference for your own learning.
+- Эти решения предназначены для образовательных целей.
+- Используйте их как справочник для собственного обучения.
 
 ## License
 
