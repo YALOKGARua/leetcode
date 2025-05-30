@@ -97,11 +97,35 @@ dotnet run 833.find-and-replace-in-string.cs
 - 793 Preimage Size of Factorial Zeroes Function
 
 ### C++
+- 800 Similar RGB Color
 - 805 Split Array With Same Average
 - 816 Ambiguous Coordinates
 - 831 Masking Personal Information
 - 834 Sum of Distances in Tree
 - 835 Image Overlap
+- 842 Split Array Into Fibonacci Sequence
+- 843 Guess the Word
+- 891 Sum of Subsequence Widths
+- 903 Valid Permutations for DI Sequence
+- 906 Super Palindromes
+- 911 Online Election
+- 913 Cat and Mouse
+- 1452
+- 1621
+- 1857
+- 1880
+- 2102
+- 2156
+- 2179
+- 2249
+- 2292
+- 2858
+- 2869
+- 2942
+- 2971
+- 3068
+- 3334
+- 3355
 
 ### C
 - 75 Sort Colors
@@ -110,9 +134,16 @@ dotnet run 833.find-and-replace-in-string.cs
 - 1877 Minimize Maximum Pair Sum in Array
 - 1954 Minimum Garden Perimeter to Collect Enough Apples
 - 2124 Check if All A's Appears Before All B's
+- 2382
+- 2475
+- 2556
+- 2763
 - 2826 Sorting Three Groups
+- 2894
 - 2929 Distribute Candies Among Children II
 - 2997 Minimum Number of Operations to Make Array XOR Equal to K
+- 3020
+- 3079
 - 3136
 - 3179 Find the N-th Value After K Seconds
 - 3352
@@ -145,12 +176,13 @@ dotnet run 833.find-and-replace-in-string.cs
 - 2656 Maximum Sum With Exactly K Elements
 - 2860 Happy Students
 - 2973 Find Number of Coins to Place in Tree Nodes
-- 3298 Apply Operations to Make String Empty
-- 3312 Find the Array Concatenation Value
-- 3355 Maximum Number of Alloys
-- 3446 Sort the Diagonals of a Matrix
-- 3485 Find the Longest Equal Subarray
-- 3560 Minimum Cost to Make Array Equal
+- 3208
+- 3298
+- 3312
+- 3355
+- 3446
+- 3485
+- 3560
 
 ### JavaScript
 - 1036 Escape a Large Maze
