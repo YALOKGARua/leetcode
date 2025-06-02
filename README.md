@@ -5,7 +5,7 @@
 ## Structure
 
 - Каждый файл с расширением `.cpp`, `.c`, `.rs`, `.js`, `.py`, `.ts`, `.cs`, или `.sql` содержит решение конкретной задачи LeetCode.
-- Формат имени файла: `<problem_number>.<extension>` или `<problem_number> <problem_title>.<extension>`, например, `1452.cpp` или `75 Sort Colors.c`
+- Формат имени файла: `<problem_number>.<extension>` или `<problem_number>.<problem_title>.<extension>`, или `<problem_number> <problem_title>.<extension>`, например, `1452.cpp`, `1154.day-of-the-year.ts` или `75 Sort Colors.c`
 
 ## Languages
 
@@ -17,6 +17,7 @@
 - Python (`.py`)
 - SQL (`.sql`)
 - C# (`.cs`)
+- Shell Script (`.sh`)
 
 ## Usage
 
@@ -24,8 +25,8 @@
 
 ### For C++:
 ```sh
-g++ 1452.cpp -o 1452
-./1452
+g++ 964.least-operators-to-express-number.cpp -o 964
+./964
 ```
 
 ### For C:
@@ -42,12 +43,12 @@ rustc 2409.rs
 
 ### For JavaScript:
 ```sh
-node 1036.js
+node 2027.js
 ```
 
 ### For TypeScript:
 ```sh
-ts-node 2359.ts
+ts-node 1154.day-of-the-year.ts
 ```
 
 ### For Python:
@@ -57,7 +58,7 @@ python 3446.py
 
 ### For SQL:
 ```sh
-sqlite3 < 3482.sql
+sqlite3 < 1824.minimum-sideway-jumps.sql
 ```
 
 ### For C#:
@@ -75,17 +76,16 @@ dotnet run 833.find-and-replace-in-string.cs
 - 1608 Special Array With X Elements Greater Than or Equal X
 - 1642 Furthest Building You Can Reach
 - 1684 Count the Number of Consistent Strings
+- 177 Nth Highest Salary
 - 2197 Replace Non-Coprime Numbers in Array
+- 2199 Finding the Topic of Each Post
 - 2232 Minimize Result by Adding Parentheses to Expression
 - 2256 Minimum Average Difference
 - 2359 Find Closest Node to Given Two Nodes
 - 237 Delete Node in a Linked List
+- 2738 Count Occurrences in Text
 - 2864 Maximum Odd Binary Number
-- 2901
-- 2918 Minimum Equal Sum of Two Arrays After Replacing Zeros
-- 3024
 - 3075 Maximize Happiness of Selected Children
-- 3203
 - 3272 Find the Count of Good Integers
 - 3545 Minimum Deletions for At Most K Distinct Characters
 - 449 Serialize and Deserialize BST
@@ -97,6 +97,8 @@ dotnet run 833.find-and-replace-in-string.cs
 - 793 Preimage Size of Factorial Zeroes Function
 
 ### C++
+- 770 Basic Calculator IV
+- 793 Preimage Size of Factorial Zeroes Function
 - 800 Similar RGB Color
 - 805 Split Array With Same Average
 - 816 Ambiguous Coordinates
@@ -110,6 +112,7 @@ dotnet run 833.find-and-replace-in-string.cs
 - 906 Super Palindromes
 - 911 Online Election
 - 913 Cat and Mouse
+- 964 Least Operators to Express Number
 - 1452
 - 1621
 - 1857
@@ -118,7 +121,6 @@ dotnet run 833.find-and-replace-in-string.cs
 - 2156
 - 2179
 - 2249
-- 2292
 - 2858
 - 2869
 - 2942
@@ -134,6 +136,8 @@ dotnet run 833.find-and-replace-in-string.cs
 - 1877 Minimize Maximum Pair Sum in Array
 - 1954 Minimum Garden Perimeter to Collect Enough Apples
 - 2124 Check if All A's Appears Before All B's
+- 2192
+- 2311
 - 2382
 - 2475
 - 2556
@@ -158,10 +162,12 @@ dotnet run 833.find-and-replace-in-string.cs
 ### Python
 - 1397 Find All Good Strings
 - 1505 Minimum Possible Integer After at Most K Adjacent Swaps On Digits
+- 1691
 - 1774 Closest Dessert Cost
 - 1849 Splitting a String Into Descending Consecutive Values
 - 1850 Minimum Adjacent Swaps to Reach the Kth Smallest Number
 - 1928 Minimum Cost to Reach Destination in Time
+- 1998
 - 2045 Second Minimum Time to Reach Destination
 - 2121 Intervals Between Identical Elements
 - 2171 Removing Minimum Number of Magic Beans
@@ -190,19 +196,23 @@ dotnet run 833.find-and-replace-in-string.cs
 - 2626 Array Reduce Transformation
 - 2627 Debounce
 - 2628 JSON Deep Equal
+- 2694
 - 2715 Timeout Cancellation
 - 2901
-- 2918 Minimum Equal Sum of Two Arrays After Replacing Zeros
 - 3024
 - 3203
 
 ### SQL
+- 1824 Minimum Sideway Jumps
 - 3482 Analyze Organization Hierarchy
 
 ### C#
 - 833 Find And Replace in String
 
-### Hackerrank
+### Shell Script
+- 1167 Minimum Cost to Connect Sticks
+
+## Hackerrank
 - maximum_subarray_modulo.cpp — Maximum Subarray Sum Modulo
 - connected_cell.cpp — Largest Connected Cell Region
 - short_palindrome.cpp — Count Short Palindromic Tuples

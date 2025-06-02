@@ -77,6 +77,7 @@
 
 #include <vector>
 #include <queue>
+#include <algorithm>
 using namespace std;
 
 // @lc code=start
@@ -86,51 +87,36 @@ public:
         int n = g.size();
         vector<vector<vector<int>>> color(n, vector<vector<int>>(n, vector<int>(2)));
         vector<vector<vector<int>>> degree(n, vector<vector<int>>(n, vector<int>(2)));
-        
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                degree[i][j][0] = g[i].size();
-                degree[i][j][1] = 0;
-                for (int k : g[j]) if (k != 0) degree[i][j][1]++;
-            }
+        for (int m = 0; m < n; ++m) for (int c = 0; c < n; ++c) {
+            degree[m][c][0] = g[m].size();
+            degree[m][c][1] = g[c].size() - count(g[c].begin(), g[c].end(), 0);
         }
-        
-        queue<vector<int>> q;
-        for (int i = 0; i < n; ++i) {
-            for (int t = 0; t < 2; ++t) {
-                color[0][i][t] = 1;
-                q.push({0, i, t});
-                if (i > 0) {
-                    color[i][i][t] = 2;
-                    q.push({i, i, t});
-                }
-            }
+        queue<tuple<int,int,int>> q;
+        for (int i = 1; i < n; ++i) for (int t = 0; t < 2; ++t) {
+            color[0][i][t] = 1; q.emplace(0,i,t);
+            color[i][i][t] = 2; q.emplace(i,i,t);
         }
-        
         while (!q.empty()) {
-            vector<int> s = q.front(); q.pop();
-            int i = s[0], j = s[1], t = s[2];
-            int c = color[i][j][t];
-            
+            auto [m,c,t] = q.front(); q.pop();
+            int res = color[m][c][t];
             if (t == 0) {
-                for (int nj : g[j]) if (nj != 0) {
-                    if (color[i][nj][1] != 0) continue;
-                    if ((c == 2 && --degree[i][nj][1] == 0) || c == 1) {
-                        color[i][nj][1] = c;
-                        q.push({i, nj, 1});
+                for (int pc : g[c]) if (pc && !color[m][pc][1]) {
+                    if (res == 2) {
+                        color[m][pc][1] = 2; q.emplace(m,pc,1);
+                    } else if (--degree[m][pc][1] == 0) {
+                        color[m][pc][1] = 1; q.emplace(m,pc,1);
                     }
                 }
             } else {
-                for (int ni : g[i]) {
-                    if (color[ni][j][0] != 0) continue;
-                    if ((c == 1 && --degree[ni][j][0] == 0) || c == 2) {
-                        color[ni][j][0] = c;
-                        q.push({ni, j, 0});
+                for (int pm : g[m]) if (!color[pm][c][0]) {
+                    if (res == 1) {
+                        color[pm][c][0] = 1; q.emplace(pm,c,0);
+                    } else if (--degree[pm][c][0] == 0) {
+                        color[pm][c][0] = 2; q.emplace(pm,c,0);
                     }
                 }
             }
         }
-        
         return color[1][2][0];
     }
 };
