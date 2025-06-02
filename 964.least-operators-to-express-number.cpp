@@ -76,6 +76,7 @@
 
 #include <unordered_map>
 #include <cmath>
+#include <climits>
 using namespace std;
 
 // @lc code=start
@@ -92,22 +93,30 @@ public:
 private:
     int dp(int x, long target, unordered_map<long, int>& memo) {
         if (target == 0) return 0;
-        if (target == 1) return 1;
+        if (target < x) return min((int)(target * 2 - 1), (int)((x - target) * 2));
         if (memo.count(target)) return memo[target];
         
-        long quotient = target / x;
-        long remainder = target % x;
-        long ans = LONG_MAX;
+        long power = x;
+        int cost = 0;
         
-        if (remainder == 0) {
-            if (quotient == 1) return 0;
-            return memo[target] = dp(x, quotient, memo) + 1;
+        while (power * x <= target) {
+            power *= x;
+            cost++;
         }
         
-        ans = min(ans, (long)dp(x, quotient, memo) + (quotient > 1 ? 1 : 0) + 1 + dp(x, remainder, memo));
-        ans = min(ans, (long)dp(x, quotient + 1, memo) + (quotient + 1 > 1 ? 1 : 0) + 1 + dp(x, x - remainder, memo));
+        int result;
         
-        return memo[target] = (int)ans;
+        if (power == target) {
+            return memo[target] = cost;
+        }
+        
+        result = cost + 1 + dp(x, target - power, memo);
+        
+        if (power * x - target < target) {
+            result = min(result, cost + 2 + dp(x, power * x - target, memo));
+        }
+        
+        return memo[target] = result;
     }
 };
 // @lc code=end
