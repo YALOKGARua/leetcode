@@ -90,7 +90,7 @@ This repository contains solutions to various LeetCode problems. Each file is na
 ### ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white) C++ Solutions
 
 <details>
-<summary>Click to expand (31 problems)</summary>
+<summary>Click to expand (45 problems)</summary>
 
 - 🧮 **770** - Basic Calculator IV
 - 🧮 **793** - Preimage Size of Factorial Zeroes Function
@@ -108,21 +108,77 @@ This repository contains solutions to various LeetCode problems. Each file is na
 - 🗳️ **911** - Online Election
 - 🐱 **913** - Cat and Mouse
 - 🧮 **964** - Least Operators to Express Number
-- 🔢 **1452**
-- 🔢 **1621**
-- 🔢 **1857**
-- 🔢 **1880**
-- 🔢 **2102**
-- 🔢 **2156**
-- 🔢 **2179**
-- 🔢 **2249**
-- 🔢 **2858**
-- 🔢 **2869**
-- 🔢 **2942**
-- 🔢 **2971**
-- 🔢 **3068**
-- 🔢 **3334**
-- 🔢 **3355**
+- 🔢 **1000** - Minimum Cost to Merge Stones
+- 🔢 **1012** - Numbers With Repeated Digits
+- 🎨 **1034** - Coloring A Border
+- 🔢 **1038** - Binary Search Tree to Greater Sum Tree
+- 🔢 **1061** - Lexicographically Smallest Equivalent String
+- 🔢 **1073** - Adding Two Negabinary Numbers
+- 🔢 **1078** - Occurrences After Bigram
+- 🔢 **1104** - Path In Zigzag Labelled Binary Tree
+- 🔢 **1114** - Print In Order
+- 🔢 **1125** - Smallest Sufficient Team
+- 🔢 **1147** - Longest Chunked Palindrome Decomposition
+- 🔢 **1172** - Dinner Plate Stacks
+- 🔢 **1187** - Make Array Strictly Increasing
+- 🔢 **1203** - Sort Items by Groups Respecting Dependencies
+- 🔢 **1220** - Count Vowels Permutation
+- 🔢 **1223** - Dice Roll Simulation
+- 🔢 **1234** - Replace the Substring for Balanced String
+- 🔢 **1240** - Tiling a Rectangle with the Fewest Squares
+- 🔢 **1249** - Minimum Remove to Make Valid Parentheses
+- 🔢 **1263** - Minimum Moves to Move a Box to Their Target Location
+- 🔢 **1353** - Maximum Number of Events That Can Be Attended
+- 🔢 **1410** - HTML Entity Parser
+- 🔢 **1452** - People Whose List of Favorite Companies Is Not a Subset of Another List
+- 🔢 **1498** - Number of Subsequences That Satisfy the Given Sum Condition
+- 🔢 **1621** - Number of Sets of K Non-Overlapping Line Segments
+- 🔢 **1695** - Maximum Erasure Value
+- 🔢 **1751** - Maximum Number of Events That Can Be Attended II
+- 🔢 **1857** - Largest Color Value in a Directed Graph
+- 🔢 **1865** - Finding Pairs With a Certain Sum
+- 🔢 **1880** - Check if Word Equals Summation of Two Words
+- 🔢 **2014** - Longest Subsequence Repeated k Times
+- 🔢 **2040** - Kth Smallest Product of Two Sorted Arrays
+- 🔢 **2102** - Sequentially Ordinal Rank Tracker
+- 🔢 **2157** - Groups of Strings
+- 🔢 **2179** - Count Good Triplets in an Array
+- 🔢 **2249** - Count Lattice Points Inside a Circle
+- 🔢 **2284** - Sender With Largest Word Count
+- 🔢 **2322** - Minimum Score After Removals on a Tree
+- 🔢 **2325** - Decode the Message
+- 🔢 **2398** - Maximum Number of Robots Within Budget
+- 🔢 **2402** - Meeting Rooms III
+- 🔢 **2410** - Maximum Matching of Players With Trainers
+- 🔢 **2413** - Smallest Even Multiple
+- 🔢 **2561** - Rearranging Fruits
+- 🔢 **2858** - Minimum Edge Reversals So Every Node Can Reach Root
+- 🔢 **2869** - Minimum Operations to Collect Elements
+- 🔢 **2925** - Maximum Score After Applying Operations on a Tree
+- 🔢 **2942** - Find Words Containing Character
+- 🔢 **2971** - Find Polygon With the Largest Perimeter
+- 🔢 **3068** - Find the Maximum Sum of Node Values
+- 🔢 **3334** - Find the Substring With Maximum Cost
+- 🔢 **3355** - Maximize the Number of Target Nodes After Connecting Trees II
+- 🔢 **3405** - Count the Number of Arrays with K Matching Adjacent Elements
+- 🔢 **3423** - Maximum Difference Between Adjacent Elements in a Circular Array
+- 🔢 **3443** - Maximum Manhattan Distance After K Changes
+- 🔢 **3445** - Maximum Difference Between Even and Odd Frequency II
+- 🔢 **3455** - Shortest Matching Substring
+- 🔢 **3465** - Find Products with Valid Serial Numbers
+- 🔢 **1967** - Number of Strings That Appear as Substrings in Word
+- 🔢 **2047** - Number of Valid Words in a Sentence
+- 🔢 **2157** - Groups of Strings
+- 🔢 **2293** - Min Max Game
+- 🔢 **2645** - Minimum Additions to Make Valid String
+- 🔢 **2862** - Maximum Element-Sum of a Complete Subset of Indices
+- 🔢 **2917** - Find the K-or of an Array
+- 🔢 **2960** - Count Tested Devices After Test Operations
+- 🔢 **3027** - Find the Number of Ways to Place People II
+- 🔢 **3040** - Maximum Number of Operations With the Same Score II
+- 🔢 **3106** - Lexicographically Smallest String After Operations With Constraint
+- 🔢 **3281** - Maximize Score of Numbers in Ranges
+- 🔢 **3408** - Design Task Manager
 
 </details>
 
@@ -226,10 +282,11 @@ This repository contains solutions to various LeetCode problems. Each file is na
 ### ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) SQL Solutions
 
 <details>
-<summary>Click to expand (2 problems)</summary>
+<summary>Click to expand (3 problems)</summary>
 
 - 🚗 **1824** - Minimum Sideway Jumps
 - 🏢 **3482** - Analyze Organization Hierarchy
+- 🏢 **1587** - Bank Account Summary II
 
 </details>
 
