@@ -140,7 +140,7 @@ class Solution {
         if (toks[pos] == "(") {
             pos++;
             Poly res = expr_();
-            pos++; // skip ')'
+            pos++; 
             return res;
         }
         if (isdigit(toks[pos][0])) {
