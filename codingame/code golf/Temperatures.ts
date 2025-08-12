@@ -1,0 +1,1 @@
+const d=require('fs').readFileSync(0,'utf8').trim().split(/\s+/).map(Number);let i=0,n=d[i++]||0,a=0,b=1e9;for(let k=0;k<n&&i<d.length;k++){let t=d[i++],x=Math.abs(t);if(x<b||x==b&&t>a){b=x;a=t}}console.log(b<1e9?a:0)

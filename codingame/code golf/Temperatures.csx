@@ -1,0 +1,1 @@
+using System;using System.Linq;var d=Console.In.ReadToEnd().Split((char[])null,StringSplitOptions.RemoveEmptyEntries);int i=0,n=i<d.Length?int.Parse(d[i++]):0,a=0,b=1000000000;for(int k=0;k<n&&i<d.Length;k++){int t=int.Parse(d[i++]),x=Math.Abs(t);if(x<b||x==b&&t>a){b=x;a=t;}}Console.Write(b<1000000000?a:0);

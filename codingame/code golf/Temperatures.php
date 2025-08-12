@@ -1,0 +1,1 @@
+<?php $d=preg_split('/\s+/',trim(stream_get_contents(STDIN)));$i=0;$n=isset($d[$i])?intval($d[$i++]):0;$a=0;$b=1000000000;for($k=0;$k<$n&&$i<count($d);$k++){ $t=intval($d[$i++]);$x=abs($t); if($x<$b||($x==$b&&$t>$a)){ $b=$x;$a=$t; } } echo $b<1000000000?$a:0; 

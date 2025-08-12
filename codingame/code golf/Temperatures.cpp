@@ -1,0 +1,2 @@
+#include <bits/stdc++.h>
+using namespace std;int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n,t,a=0,b=1e9;cin>>n;while(n--&&cin>>t){int x=abs(t);if(x<b||x==b&&t>a){b=x;a=t;}}cout<<(b<1e9?a:0);} 

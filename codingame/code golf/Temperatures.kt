@@ -1,0 +1,3 @@
+import java.io.BufferedReader
+import java.io.InputStreamReader
+fun main(){val d=BufferedReader(InputStreamReader(System.`in`)).readText().trim().split(Regex("\\s+")).filter{it.isNotEmpty()};var i=0;val n=if(d.isNotEmpty()) d[i++].toInt() else 0;var a=0;var b=1000000000;repeat(n){if(i<d.size){val t=d[i++].toInt();val x=kotlin.math.abs(t);if(x<b||x==b&&t>a){b=x;a=t}}};print(if(b<1000000000)a else 0)}

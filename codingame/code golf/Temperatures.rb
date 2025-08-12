@@ -1,0 +1,1 @@
+d=STDIN.read.split.map!(&:to_i);i=0;n=d[i++]||0;a=0;b=1_000_000_000;n.times{t=d[i++]||0;x=t.abs;if x<b||x==b&&t>a;b=x;a=t;end};puts b<1_000_000_000 ? a : 0
