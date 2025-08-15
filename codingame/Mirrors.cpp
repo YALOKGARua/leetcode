@@ -1,60 +1,33 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
-
 using namespace std;
 
 int main() {
     int n;
-    cin >> n;
-    
+    if (!(cin >> n)) return 0;
     vector<double> r(n);
-    for (int i = 0; i < n; i++) {
-        cin >> r[i];
-    }
-    
-    double total = 0.0;
-    
-    for (int i = 0; i < n; i++) {
-        double light = 1.0;
-        for (int j = 0; j < i; j++) {
-            light *= (1.0 - r[j]);
+    for (int i = 0; i < n; ++i) cin >> r[i];
+
+    const double EPS = 1e-12;
+    double R = 0.0;
+    for (int i = n - 1; i >= 0; --i) {
+        double ri = r[i];
+        if (ri >= 1.0 - EPS) {
+            R = 1.0;
+            continue;
         }
-        
-        total += light * r[i];
-        
-        if (i < n - 1) {
-            double through = light * (1.0 - r[i]);
-            
-            for (int j = i + 1; j < n; j++) {
-                for (int k = i + 1; k < j; k++) {
-                    through *= (1.0 - r[k]);
-                }
-                
-                double bounce = through * r[j];
-                
-                double back = bounce;
-                for (int k = j - 1; k >= i; k--) {
-                    back *= (1.0 - r[k]);
-                }
-                
-                double multiplier = 1.0;
-                for (int k = i; k < j; k++) {
-                    multiplier *= (1.0 - r[k]) * (1.0 - r[k]);
-                }
-                
-                if (multiplier < 1.0) {
-                    total += back / (1.0 - multiplier);
-                } else {
-                    total += back;
-                }
-                
-                through *= (1.0 - r[j]);
-            }
+        double t = 1.0 - ri;
+        double denom = 1.0 - ri * R;
+        if (denom <= EPS) {
+            R = 1.0;
+        } else {
+            R = ri + (t * t * R) / denom;
+            if (R < 0.0) R = 0.0;
+            if (R > 1.0) R = 1.0;
         }
     }
-    
-    cout << fixed << setprecision(4) << total << endl;
-    
+
+    cout << fixed << setprecision(4) << R << endl;
     return 0;
 }

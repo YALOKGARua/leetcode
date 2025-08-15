@@ -1,78 +1,105 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
 #include <cctype>
+
 using namespace std;
 
-bool isLetter(char c) { return isalpha(c); }
-bool isDigit(char c) { return isdigit(c); }
-bool isOther(char c) { return !isLetter(c) && !isDigit(c); }
-
-int letterDistance(char a, char b) {
-    char a_lower = tolower(a);
-    char b_lower = tolower(b);
-    return abs(a_lower - b_lower);
+static inline bool ff_is_letter(char c) {
+    return isalpha(static_cast<unsigned char>(c));
 }
 
-int numberDistance(const string& num1, const string& num2) {
-    return abs(stoi(num1) - stoi(num2));
+static inline bool ff_is_digit(char c) {
+    return isdigit(static_cast<unsigned char>(c));
 }
 
-bool matches(const string& template_str, const string& candidate, 
-             bool letterCase, int letterFuzz, int numberFuzz, bool otherFuzz) {
-    int i = 0, j = 0;
-    while (i < template_str.length() && j < candidate.length()) {
-        char t = template_str[i];
-        char c = candidate[j];
-        if (isLetter(t) && isLetter(c)) {
-            if (letterCase && t != c) return false;
-            if (letterDistance(t, c) > letterFuzz) return false;
-            i++; j++;
-        }
-        else if (isDigit(t) && isDigit(c)) {
-            string num1, num2;
-            while (i < template_str.length() && isDigit(template_str[i])) num1 += template_str[i++];
-            while (j < candidate.length() && isDigit(candidate[j])) num2 += candidate[j++];
-            if (numberDistance(num1, num2) > numberFuzz) return false;
-        }
-        else if (isOther(t) && isOther(c)) {
-            if (otherFuzz) {
-                if (t != c) return false;
-            }
-            i++; j++;
-        }
-        else if (!isLetter(t) && !isLetter(c)) {
-            // both are not letters, treat as 'other' for otherFuzz=false
-            i++; j++;
-        }
-        else {
-            return false;
-        }
+static inline bool ff_is_alnum(char c) {
+    return isalnum(static_cast<unsigned char>(c));
+}
+
+static inline long long ff_read_number(const string& s, size_t& i) {
+    long long v = 0;
+    while (i < s.size() && ff_is_digit(s[i])) {
+        v = v * 10 + (s[i] - '0');
+        ++i;
     }
-    return i == template_str.length() && j == candidate.length();
+    return v;
+}
+
+static inline bool ff_match_letter(char a, char b, bool letterCase, int letterFuzz) {
+    if (letterCase) {
+        bool aLower = islower(static_cast<unsigned char>(a));
+        bool bLower = islower(static_cast<unsigned char>(b));
+        if (aLower != bLower) return false;
+    }
+    int da = tolower(static_cast<unsigned char>(a));
+    int db = tolower(static_cast<unsigned char>(b));
+    return abs(da - db) <= letterFuzz;
+}
+
+static bool ff_matches(const string& t, const string& c, bool letterCase, int letterFuzz, int numberFuzz, bool otherFuzz) {
+    size_t i = 0, j = 0;
+    while (i < t.size() && j < c.size()) {
+        char a = t[i];
+        char b = c[j];
+
+        if (ff_is_digit(a) && ff_is_digit(b)) {
+            size_t ii = i, jj = j;
+            long long va = ff_read_number(t, ii);
+            long long vb = ff_read_number(c, jj);
+            long long diff = va - vb;
+            if (diff < 0) diff = -diff;
+            if (diff > numberFuzz) return false;
+            i = ii;
+            j = jj;
+            continue;
+        }
+
+        if (ff_is_letter(a) && ff_is_letter(b)) {
+            if (!ff_match_letter(a, b, letterCase, letterFuzz)) return false;
+            ++i;
+            ++j;
+            continue;
+        }
+
+        bool aAn = ff_is_alnum(a);
+        bool bAn = ff_is_alnum(b);
+        if (!aAn && !bAn) {
+            if (otherFuzz) {
+                if (a != b) return false;
+            }
+            ++i;
+            ++j;
+            continue;
+        }
+
+        return false;
+    }
+    return i == t.size() && j == c.size();
 }
 
 int main() {
     string letter_case;
-    getline(cin, letter_case);
+    if (!getline(cin, letter_case)) return 0;
     int letter_fuzz;
     cin >> letter_fuzz; cin.ignore();
     int number_fuzz;
     cin >> number_fuzz; cin.ignore();
     string other_fuzz;
     getline(cin, other_fuzz);
-    string _template;
-    getline(cin, _template);
+    string tmpl;
+    getline(cin, tmpl);
     int n;
     cin >> n; cin.ignore();
     vector<string> candidates(n);
-    for (int i = 0; i < n; i++) getline(cin, candidates[i]);
-    for (int i = 0; i < n; i++) {
-        bool result = matches(_template, candidates[i], 
-                            letter_case == "true", letter_fuzz, 
-                            number_fuzz, other_fuzz == "true");
-        cout << (result ? "true" : "false") << endl;
+    for (int i = 0; i < n; ++i) getline(cin, candidates[i]);
+
+    bool letterCase = (letter_case == "true");
+    bool otherFuzz = (other_fuzz == "true");
+
+    for (int i = 0; i < n; ++i) {
+        bool ok = ff_matches(tmpl, candidates[i], letterCase, letter_fuzz, number_fuzz, otherFuzz);
+        cout << (ok ? "true" : "false") << endl;
     }
     return 0;
 }
